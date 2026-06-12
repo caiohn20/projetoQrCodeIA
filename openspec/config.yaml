@@ -1,0 +1,51 @@
+schema: spec-driven
+
+context: |
+  Projeto: projetoQrCodeIA (Gerador de QR Code online)
+  Idioma: pt-BR
+  Dono: Caioh
+
+  Resumo:
+    SPA estática client-side para gerar QR Codes a partir de texto livre,
+    exportar PNG, copiar imagem e expor representações técnicas (base64,
+    bytes PNG, bitmap RGBA) em seção colapsável. Sem backend, sem leitor
+    de QR, sem câmera.
+
+  Stack:
+    - Vite 6 + TypeScript (vanilla DOM, sem framework UI)
+    - qrcode@^1.5.4 para geração (encode)
+    - Vitest + happy-dom para testes unitários (lib/)
+    - OpenSpec para spec-driven development
+    - BMAD instalado para workflows de produto/dev
+
+  Defaults de geração (qrcode):
+    - errorCorrectionLevel: M
+    - margin: 4
+    - quality: 0.92
+    - color: #000000 / #ffffff
+    - type: image/png
+
+  Estrutura de código:
+    - src/app.ts — UI e orquestração
+    - src/lib/qr-generate.ts — geração
+    - src/lib/formats.ts — base64, bytes, bitmap
+    - src/lib/download.ts — download PNG e clipboard
+    - src/lib/errors.ts — log centralizado
+
+  Deploy:
+    npm run build → dist/ (host estático)
+
+  Fora de escopo (MVP):
+    - Decode/leitura de QR (jsQR, câmera, upload para ler)
+    - Backend/API REST, autenticação, histórico
+    - Templates Wi-Fi, vCard, customização visual do QR
+
+rules:
+  proposal:
+    - Escrever em português (pt-BR)
+    - Incluir seção Non-goals quando aplicável
+  specs:
+    - Requisitos normativos com SHALL/MUST
+    - Cada requisito com pelo menos um cenário WHEN/THEN
+  tasks:
+    - Marcar tarefas já concluídas com [x] quando documentar work existente

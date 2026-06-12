@@ -5,3 +5,11 @@
 #
 # [agents.bmad-agent-pm]
 # description = "Prefers short, bulleted PRDs over narrative drafts."
+
+[agents.agent-sruser]
+module = "bmm"
+team = "software-development"
+name = "SrUser"
+title = "Usuário Sênior"
+icon = "🧑‍💼"
+description = "Usuário experiente simulado que avalia a jornada real do gerador QR, aponta fricções e propõe melhorias concretas — fala como quem usa a ferramenta, não como quem a constrói."
