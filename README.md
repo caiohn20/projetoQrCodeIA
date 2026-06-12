@@ -1,10 +1,10 @@
-# projetoQrCodeIA
+# BMAD & OpenSpec - Gerador de QR CODE
 
 Gerador de QR Code online — SPA estática, 100% client-side, em português (pt-BR).
 
 A partir de texto livre, o usuário visualiza o QR em tempo real, baixa PNG, copia a imagem para a área de transferência e, opcionalmente, consulta representações técnicas (base64, bytes PNG, bitmap RGBA) em seção colapsável.
 
-**Dono do projeto:** Caioh
+**Dono do projeto:** Caio Henrique Natal
 
 ---
 
